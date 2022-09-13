@@ -1,7 +1,7 @@
 // Crear un array vacío llamado 'toDoItems'
 // Tu codigo acá:
 
- //const { prototype } = require("markdown-it/lib/token");
+
 
 var toDoItems = [];
 
