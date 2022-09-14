@@ -1,0 +1,344 @@
+.btnHover {
+  background-color: #2b385e;
+  color: #ffffff;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #5E6164;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Russo One', sans-serif;
+  color: #23293B;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+nav {
+  background-color: #F6F6F6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+nav h1 {
+  font-size: 50px;
+  padding: 30px;
+  text-align: center;
+}
+nav ul {
+  text-align: center;
+  font-size: 15px;
+}
+nav ul a {
+  text-decoration: none;
+  color: #454A59;
+}
+@media (max-width: 500px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    width: 100%;
+  }
+}
+.Inicio {
+  padding: 15px;
+}
+.SobreNosotros {
+  padding: 15px;
+}
+.Blog {
+  padding: 15px;
+}
+.Contacto {
+  padding: 15px;
+}
+.Registrarse {
+  padding: 15px;
+}
+footer {
+  color: #22283B;
+  background: #f4f4f4;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .imgDiv {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .home .imgDiv {
+    display: flex;
+    text-align: center;
+  }
+}
+.home .imgDiv .imgNav {
+  width: 97%;
+  border-radius: 20px;
+  padding-top: 5px;
+}
+@media (max-width: 500px) {
+  .home .imgDiv .imgNav {
+    width: 95%;
+    border-radius: 10px;
+  }
+}
+.intro h2 {
+  padding: 15px;
+}
+.intro p {
+  padding: 0 15px;
+}
+.music-images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .music-images .ondas,
+  .music-images .tecnologia {
+    display: none;
+  }
+  .music-images .auricular {
+    width: 100%;
+  }
+  .music-images img {
+    width: 28%;
+    margin: 20px 2.5%;
+    border-radius: 20px;
+    height: 100%;
+  }
+}
+.musica-nueva {
+  padding: 15px;
+}
+.musica-nueva h3 {
+  margin-top: 11px;
+}
+.musica-nueva p {
+  margin-top: 13px;
+}
+.actual {
+  margin-top: 60px;
+  border-top: 1px solid #dee2e6;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .actual {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.actual .actual-text {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .actual .actual-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.actual h3 {
+  margin-bottom: 10px;
+}
+.actual p {
+  margin-bottom: 26px;
+}
+.actual .btn {
+  font-size: 15px;
+  display: inline;
+  padding: 10px;
+  border-radius: 7px;
+  color: #F6F6F6;
+  background-color: #22283A;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.actual .btn:hover {
+  background-color: #2b385e;
+  color: #ffffff;
+}
+.actual-img {
+  width: 46%;
+  margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .actual-img {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 25px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.actual-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
