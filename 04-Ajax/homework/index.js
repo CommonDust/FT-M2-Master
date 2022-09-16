@@ -46,8 +46,11 @@ $.ajax({
   success:  (result) => {
     $('#success').text("Te desconosi")
     console.log(result)
+    $("#inputDelete").val("")
   }
-
+ 
+  
 })
 
+showFriends()
 })
