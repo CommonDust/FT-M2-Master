@@ -1,6 +1,11 @@
-(function () {
+var EventEmitter = require ("./event-emitter.js");
 
-  window.whiteboard = new window.EventEmitter();
+
+
+  // window.whiteboard = new window.EventEmitter(); --> esta es la forma de "exportar o modularizar" mediante IIFE
+
+  var whiteboard = new EventEmitter() // --> De esta manera hago que el la funcion global del EventEmitter quede guardada en whiteboard y asi puedo exportarla facilmente 
+
 
   // Ultimately, the color of our stroke;
   var color;
@@ -113,4 +118,5 @@
 
   };
 
-})();
+;
+module.exports = whiteboard
