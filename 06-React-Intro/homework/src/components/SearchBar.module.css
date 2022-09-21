@@ -1,0 +1,23 @@
+
+.divSB{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-bottom: 15px ;
+}
+
+.inputSB{
+    border-radius: 3px;
+background: rgb(164, 212, 255);;
+}
+
+.inputSB::placeholder{
+    color:white;
+}
+
+.btnSearch{
+    border-radius: 3px;
+    background-color: white;
+    color: rgb(164, 212, 255);;
+}

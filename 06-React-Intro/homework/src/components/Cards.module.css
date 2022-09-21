@@ -1,0 +1,7 @@
+.divCards{
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:space-between;
+    align-items: flex-end;
+}

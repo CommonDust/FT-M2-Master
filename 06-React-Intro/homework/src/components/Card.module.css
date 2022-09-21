@@ -1,0 +1,35 @@
+.btn{
+    font-size: small;
+    color:azure;
+    background: rgb(239, 30, 30);
+    border-radius:  100%;
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: end;
+    padding: 2px;
+}
+
+.divCard{
+   
+    width: 300px;
+    background-color: rgb(164, 212, 255);
+    display: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    border: solid;
+   border-radius: 5px ;
+}
+
+
+
+
+.cityName{
+    display: block;
+    justify-content: center;
+}
+
+.ulCard{
+    padding:0;
+}

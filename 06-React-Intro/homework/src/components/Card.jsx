@@ -1,18 +1,20 @@
 import React from 'react';
-import App from '../App';
-import data from "../data"
+import style from './Card.module.css'
 
 export default function Card(props) {
   // acá va tu código
+  
   return  (
-    <div>
-      <button>X</button>
-    <h3 className='CityName'>{props.name}</h3>
-    <img src={`http://openweathermap.org/img/wn/03n@2x.png`} alt='Estado del clima'></img>
-    <ul>
-      <p className="tempMin"> Min: {props.min} </p>
+    <div className={style.divCard}>
+      <div className={style.btnDiv}>
+      <button onClick={props.onClose} className={style.btn}>X</button>
+      </div>
+    <h3 className={style.cityName}>{props.name}</h3>
+    <img src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt='Estado del clima'></img>
+    <ul className={style.ulCard}>
+      <p className={style.tempMin}> Min: {props.min} </p>
     </ul>
-    <ul>
+    <ul className={style.ulCard}>
       <p className="tempMax"> Max: {props.min}</p>
     </ul>
     
