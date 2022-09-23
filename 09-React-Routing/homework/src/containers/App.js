@@ -1,22 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import About from "../components/About";
+import Ciudad from "../components/Ciudad";
+import Nav from "../components/Nav.jsx";
+import Cards from "../components/Cards.jsx";
 
-import './App.css';
-import Nav from '../components/Nav.jsx';
-import Cards from '../components/Cards.jsx';
-
-const apiKey = 'Aqui va la API key que creaste';
+const apiKey = "6ea7182b6036b01ecfc1c8e1931fa29c";
 
 function App() {
   const [cities, setCities] = useState([]);
+
   function onClose(id) {
-    setCities(oldCities => oldCities.filter(c => c.id !== id));
+    setCities((oldCities) => oldCities.filter((c) => c.id !== id));
   }
+
   function onSearch(ciudad) {
     //Llamado a la API del clima
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`)
-      .then(r => r.json())
+    fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}`
+    )
+      .then((r) => r.json())
       .then((recurso) => {
-        if(recurso.main !== undefined){
+        if (recurso.main !== undefined) {
           const ciudad = {
             min: Math.round(recurso.main.temp_min),
             max: Math.round(recurso.main.temp_max),
@@ -28,31 +34,47 @@ function App() {
             weather: recurso.weather[0].main,
             clouds: recurso.clouds.all,
             latitud: recurso.coord.lat,
-            longitud: recurso.coord.lon
+            longitud: recurso.coord.lon,
           };
-          setCities(oldCities => [...oldCities, ciudad]);
+          setCities((oldCities) => [...oldCities, ciudad]);
         } else {
           alert("Ciudad no encontrada");
         }
       });
   }
-  function onFilter(ciudadId) {
-    let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
-    if(ciudad.length > 0) {
-        return ciudad[0];
-    } else {
-        return null;
-    }
-  }
+  // function onFilter(ciudadId) {
+  //   let ciudad = cities.filter((c) => c.id === parseInt(ciudadId));
+  //   if (ciudad.length > 0) {
+  //     return ciudad[0];
+  //   } else {
+  //     return null;
+  //   }
+  // }
   return (
     <div className="App">
-      <Nav onSearch={onSearch}/>
+      {/* <Routes>
+      <Route
+    path='/'
+    element={<Nav onSearch={onSearch}/>}
+/>
+      </Routes> */}
+      <Nav onSearch={onSearch} />
       <div>
-        <Cards
-          cities={cities}
-          onClose={onClose}
-        />
+        <Routes>
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={<Cards cities={cities} onClose={onClose} />}
+          />
+        </Routes>
+
+        <Routes>
+          <Route path="/ciudad/:id" element={<Ciudad cities={cities} />} />
+        </Routes>
       </div>
+
       <hr />
     </div>
   );
